@@ -1,7 +1,10 @@
 import './App.css';
-import Footer from "./components/footer/Footer";
+import Navbar from "./components/navbar/Navbar";
 import styled from "styled-components";
-import Location from "./components/location/Location";
+import {useContext} from "react";
+import {PageContext} from "./context/PageProvider";
+import PageContent from "./components/page-content/PageContent";
+import Footer from "./components/footer/Footer";
 
 const PageContainer = styled.div`
   display: flex;
@@ -12,25 +15,20 @@ const PageContainer = styled.div`
   background-color: white;
 `;
 
-const Content = styled.div`
-  flex: 1; /* This will push the footer to the bottom */
-`;
-
-const FooterContainer = styled.div`
-  /* Add styles for your footer here */
-`;
-
 function App() {
+    const {
+        currentPage,
+    } = useContext(PageContext);
+
     return (
         <div style={{ backgroundColor: '#ed9640' }}> {/* Set yellow background for the entire page */}
             <PageContainer>
-                <Content></Content>
-                <Location latitude={32.87002934058916} longitude={-117.23094501164017}/>
-                <FooterContainer>
-                    <Footer />
-                </FooterContainer>
+                <Navbar currentPage={currentPage}/>
+                <PageContent currentPage={currentPage}/>
+                <Footer/>
             </PageContainer>
         </div>
+
     );
 }
 

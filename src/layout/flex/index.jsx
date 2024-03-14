@@ -4,7 +4,9 @@ function Flex({
                   flexDirection,
                   justifyContent,
                   alignItems,
+                  marginRight,
                   children,
+                  display,
                   ...props
               }) {
     return (
@@ -12,6 +14,8 @@ function Flex({
             $flexDirection={flexDirection}
             $justifyContent={justifyContent}
             $alignItems={alignItems}
+            $marginRight={marginRight}
+            $display={display}
             {...props}
         >
             {children}

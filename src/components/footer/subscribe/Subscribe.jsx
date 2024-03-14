@@ -1,4 +1,4 @@
-import Flex from "../../layout/flex";
+import Flex from "../../../layout/flex";
 import Button from "../button/Button";
 import styled from "styled-components";
 import React, { useState } from 'react';

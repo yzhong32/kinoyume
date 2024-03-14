@@ -1,19 +1,17 @@
-import Info from "../info/Info";
+import Info from "./info/Info";
 import Flex from "../../layout/flex";
-import LogoComponent from "../logo/Logo";
-import styled from "styled-components";
-import Subscribe from "../subscribe/Subscribe";
+import LogoComponent from "./logo/Logo";
+import Subscribe from "./subscribe/Subscribe";
+import * as Styled from "./styles";
 
-const StyledHr = styled.hr`
-  position: relative;
-  z-index: 1;
-  margin-top: 60px;
-`;
+
 
 function Footer() {
     return (
-        <div>
-            <StyledHr/>
+        <Styled.StyledFooter>
+            <Flex display={'fixed'}>
+                <Styled.StyledHr/>
+            </Flex>
             <Flex justifyContent="center" alignItems="center">
                 <Flex justifyContent="center" flexDirection='column' alignItems="center">
                     <Info title='Address' content={['8843 Villa La Jolla Dr,', 'La Jolla, CA 92037']}/>
@@ -29,7 +27,7 @@ function Footer() {
                     <Info title='Open Hours' content={['Mon-Thu 11am - 9:30pm', 'Fri 11am - 10:00pm', 'Sat 12pm - 10pm', 'Sun 12pm - 9:30pm']}/>
                 </Flex>
             </Flex>
-        </div>
+        </Styled.StyledFooter>
     );
 }
 
