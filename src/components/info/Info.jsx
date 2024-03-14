@@ -1,19 +1,3 @@
-// import Flex from "../../layout/flex";
-// import Container from "../../layout/container";
-//
-// function Info({ title, content, ...props }) {
-//     return (
-//             <Flex flexDirection='column' justifyContent='center' alignItems='center'>
-//             <h1>{title}</h1>
-//             {content.map((line, index) => (
-//                 <p key={index}>{line}</p>
-//             ))}
-//             </Flex>
-//     );
-// }
-//
-// export default Info;
-
 import React from 'react';
 import styled from 'styled-components';
 
