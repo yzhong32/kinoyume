@@ -7,7 +7,7 @@ import Subscribe from "../subscribe/Subscribe";
 const StyledHr = styled.hr`
   position: relative;
   z-index: 1;
-  margin-top: 800px;
+  margin-top: 60px;
 `;
 
 function Footer() {

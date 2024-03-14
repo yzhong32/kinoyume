@@ -1,6 +1,7 @@
 import './App.css';
 import Footer from "./components/footer/Footer";
 import styled from "styled-components";
+import Location from "./components/location/Location";
 
 const PageContainer = styled.div`
   display: flex;
@@ -23,11 +24,9 @@ function App() {
     return (
         <div style={{ backgroundColor: '#ed9640' }}> {/* Set yellow background for the entire page */}
             <PageContainer>
-                <Content>
-                    {/* All your page content except the footer goes here */}
-                </Content>
+                <Content></Content>
+                <Location latitude={32.87002934058916} longitude={-117.23094501164017}/>
                 <FooterContainer>
-                    {/* Your Footer component goes here */}
                     <Footer />
                 </FooterContainer>
             </PageContainer>
