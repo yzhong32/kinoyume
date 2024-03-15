@@ -6,6 +6,7 @@ import {PageContext} from "./context/PageProvider";
 import PageContent from "./components/page-content/PageContent";
 import Footer from "./components/footer/Footer";
 
+
 const PageContainer = styled.div`
   display: flex;
   margin-right: 3%;
@@ -21,7 +22,7 @@ function App() {
     } = useContext(PageContext);
 
     return (
-        <div style={{ backgroundColor: '#ed9640' }}> {/* Set yellow background for the entire page */}
+        <div style={{ backgroundColor: '#ed9640' }}>
             <PageContainer>
                 <Navbar currentPage={currentPage}/>
                 <PageContent currentPage={currentPage}/>

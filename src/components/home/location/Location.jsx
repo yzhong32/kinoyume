@@ -47,7 +47,7 @@ const Location = ({lat, lng}) => {
     }, []);
 
     return (
-        <Flex flexDirection={'column'}>
+        <Flex flexDirection={'column'} marginBottom={'100px'}>
             <Styled.StyledH1>Our Location</Styled.StyledH1>
             <div id="map" style={{ width: '75%', height: '600px' }}/>
         </Flex>

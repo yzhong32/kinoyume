@@ -32,4 +32,5 @@ export const BottomBorder = styled.div`
   height: 1px;
   background-color: #CFCFCF;
   background-image: linear-gradient(to right, #FFFFFF 0%, #CFCFCF 50%, #FFFFFF 100%);
+  margin-bottom: 22.08px;
 `;

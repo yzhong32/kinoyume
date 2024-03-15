@@ -1,43 +1,59 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const Flex = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 0; /* Adjust the margin bottom as needed */
-`;
-
-const Title = styled.h1`
-  margin-bottom: 10px;
-  font-family: 'Courier New', monospace;
-`;
-
-const Paragraph = styled.p`
-  margin: 0;
-  font-family: 'Courier New', monospace;
-  font-size: 24px;
-`;
+import * as Styled from './styles'
+import Flex from "../../../layout/flex";
+import extractDayAndTime from "../../../utils/helper";
 
 function Info({ title, content }) {
+    const contentType = content[0];
+    const renderContent = () => {
+        switch (contentType) {
+            case 'addr':
+                return content.slice(1).map((line, index) => (
+                    <Styled.Paragraph key={index}>{line}</Styled.Paragraph>
+                ));
+            case 'phone':
+                return content.slice(1).map((line, index) => (
+                    <Styled.Paragraph key={index}>
+                        <a href={`tel:${line}`} style={{ color: 'black', textDecoration: 'none' }}>{line}</a>
+                    </Styled.Paragraph>
+                ));
+            case 'open':
+                let { days, times } = extractDayAndTime(content);
+                let dayComponent = <Styled.Paragraph>
+                    <Flex flexDirection={'column'} alignItems={'end'}>
+                        {days.map((line, index) => (
+                            <Styled.Paragraph key={index}>{line}</Styled.Paragraph>
+                        ))}
+                    </Flex>
+                </Styled.Paragraph>
+
+                let timeComponent = <Styled.Paragraph>
+                    <Flex flexDirection={'column'} alignItems={'start'}>
+                        {times.map((line, index) => (
+                            <Styled.Paragraph key={index}>{line}</Styled.Paragraph>
+                        ))}
+                    </Flex>
+                </Styled.Paragraph>
+
+
+                return (
+                    <Flex justifyContent={'center'} gap={'22.76px'}>
+                        {dayComponent}
+                        {timeComponent}
+                    </Flex>
+                )
+            default:
+                return <Styled.Paragraph/>
+        }
+    };
+
     return (
-        <Flex>
-            <Title>{title}</Title>
-            {content.map((line, index) => {
-                if (line.startsWith('(')) {
-                    return (
-                        <Paragraph key={index}>
-                            <a href={`tel:+18589990308`} style={{ color: 'black', textDecoration: 'none' }}>{line}</a>
-                        </Paragraph>
-                    );
-                } else {
-                    return (
-                        <Paragraph key={index}>{line}</Paragraph>
-                    );
-                }
-            })}
+        <Flex flexDirection={'column'} justifyContent={'center'}>
+            <Styled.Title>{title}</Styled.Title>
+            {renderContent()}
         </Flex>
     );
 }
+
 export default Info;
+
