@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const LogoContainer = styled.div`
   display: flex;
@@ -10,7 +10,7 @@ export const LogoContainer = styled.div`
 `;
 
 export const Logo = styled.img`
-    margin-bottom: 25.32px;
+  margin-bottom: 25.32px;
 `;
 
 export const SocialMediaIcons = styled.div`
@@ -31,6 +31,7 @@ export const BottomBorder = styled.div`
   width: 320.36px;
   height: 1px;
   background-color: #CFCFCF;
-  background-image: linear-gradient(to right, #FFFFFF 0%, #CFCFCF 50%, #FFFFFF 100%);
+  background-image: linear-gradient(to right,
+  #FFFFFF 0%, #CFCFCF 50%, #FFFFFF 100%);
   margin-bottom: 22.08px;
 `;

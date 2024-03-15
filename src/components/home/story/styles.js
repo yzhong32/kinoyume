@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 export const Restaurants = styled.img`
     width: 60%;
 `;

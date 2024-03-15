@@ -1,10 +1,10 @@
 import './App.css';
-import Navbar from "./components/navbar/Navbar";
-import styled from "styled-components";
-import {useContext} from "react";
-import {PageContext} from "./context/PageProvider";
-import PageContent from "./components/page-content/PageContent";
-import Footer from "./components/footer/Footer";
+import Navbar from './components/navbar/Navbar';
+import styled from 'styled-components';
+import {useContext} from 'react';
+import {PageContext} from './context/PageProvider';
+import PageContent from './components/page-content/PageContent';
+import Footer from './components/footer/Footer';
 
 
 const PageContainer = styled.div`
@@ -14,23 +14,24 @@ const PageContainer = styled.div`
   flex-direction: column;
   min-height: 100vh;
   background-color: white;
+  gap: 75px;
 `;
 
 function App() {
-    const {
-        currentPage,
-    } = useContext(PageContext);
+  const {
+    currentPage,
+  } = useContext(PageContext);
 
-    return (
-        <div style={{ backgroundColor: '#ed9640' }}>
-            <PageContainer>
-                <Navbar currentPage={currentPage}/>
-                <PageContent currentPage={currentPage}/>
-                <Footer/>
-            </PageContainer>
-        </div>
+  return (
+    <div style={{backgroundColor: '#ed9640'}}>
+      <PageContainer>
+        <Navbar currentPage={currentPage}/>
+        <PageContent currentPage={currentPage}/>
+        <Footer/>
+      </PageContainer>
+    </div>
 
-    );
+  );
 }
 
 export default App;

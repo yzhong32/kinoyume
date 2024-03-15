@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const activeColor = 'black';
 const inactiveColor = '#989E8D';
 
-const font = "'Your font family here', sans-serif";
+const font = '\'Your font family here\', sans-serif';
 const fontSize = '20px'; // Adjust as necessary
 export const StyledNavBar = styled.div`
   padding-top: 50px;
