@@ -5,7 +5,7 @@ function Flex({
                   justifyContent,
                   alignItems,
                   marginRight,
-                  display,
+                  marginBottom,
                   width,
                   top,
                   gap,
@@ -18,7 +18,7 @@ function Flex({
             $justifyContent={justifyContent}
             $alignItems={alignItems}
             $marginRight={marginRight}
-            $display={display}
+            $marginBottom={marginBottom}
             $width={width}
             $top={top}
             $gap={gap}

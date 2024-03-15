@@ -20,7 +20,7 @@ function NavBar() {
 
     return (
         <Styled.StyledNavBar>
-                <Flex justifyContent='space-around'>
+                <Flex justifyContent='space-around' marginBottom={'40px'}>
                     <Styled.StyledLogo src={Logo} alt="Logo" />
                     <Flex justifyContent='space-around' marginRight='6%'>
                         <PageItem active={currentPage === 1} done={currentPage !== 1} onClick={() => handleStepClick(1)}>

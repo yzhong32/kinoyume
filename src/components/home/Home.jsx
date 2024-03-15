@@ -4,9 +4,11 @@ import TestImg from './favorite/images/test.png';
 import Flex from "../../layout/flex";
 import * as Styled from "./styles";
 import Story from "./story/story";
+import Hero from "./hero/hero";
 function Home() {
     return (
         <Flex flexDirection={'column'}>
+            <Hero/>
             <Story/>
             <Styled.StyledH1>Some of our Favorites...</Styled.StyledH1>
             <Flex flexDirection={'column'} gap={'40px'} width={'90%'}>

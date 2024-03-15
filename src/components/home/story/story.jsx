@@ -12,7 +12,7 @@ function Story() {
     };
 
     return (
-        <Flex justifyContent={'center'}>
+        <Flex justifyContent={'center'} marginBottom={'150px'}>
             <Styled.Restaurants src={Img} alt={''}/>
             <Flex flexDirection={'column'} width={'16%'}>
                 <Styled.StyledP>
