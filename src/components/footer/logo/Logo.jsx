@@ -15,11 +15,9 @@ const PageContainer = styled.div`
 `;
 
 const Logo = styled.img`
+  padding-top: 100px;
   width: 100%;
-  max-width: 360px;
   margin-bottom: 0;
-  margin-left: 80px;
-  margin-right: 80px;
   z-index: 2;
 `;
 

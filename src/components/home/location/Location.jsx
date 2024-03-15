@@ -1,51 +1,59 @@
-import React, { useState, useEffect } from 'react';
-import { MapContainer, TileLayer, Marker, useMap } from 'react-leaflet';
-import L from 'leaflet';
-import 'leaflet/dist/leaflet.css';
+import React, { useEffect } from 'react';
+import Flex from "../../../layout/flex";
+import * as Styled from './styles'
+const Location = ({lat, lng}) => {
+    useEffect(() => {
+        const googleMapsScriptId = 'google-maps-script';
 
-import markerIconPng from "leaflet/dist/images/marker-icon.png"
-import markerIconShadow from "leaflet/dist/images/marker-shadow.png"
+        const loadGoogleMapsScript = () => {
+            if (document.getElementById(googleMapsScriptId)) {
+                if (window.google && window.google.maps) {
+                    initMap();
+                } else {
+                    setTimeout(loadGoogleMapsScript, 500);
+                }
+                return;
+            }
 
-const defaultIcon = L.icon({
-    iconUrl: markerIconPng,
-    shadowUrl: markerIconShadow,
-    iconSize: [25, 41], // Size of the icon
-    iconAnchor: [12, 41], // Point of the icon which will correspond to marker's location
-    popupAnchor: [1, -34], // Point from which the popup should open relative to the iconAnchor
-    shadowSize: [41, 41] // Size of the shadow
-});
+            const script = document.createElement('script');
+            script.id = googleMapsScriptId;
+            script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCJZDWdrabvY4_n7Fu3a4eZlQsbaNPEhlc&callback=initMap`;
+            script.async = true;
+            script.defer = true;
+            window.initMap = initMap;
+            document.head.appendChild(script);
+        };
 
-L.Marker.prototype.options.icon = defaultIcon;
+        async function initMap() {
+            if (!window.google || !window.google.maps) {
+                loadGoogleMapsScript();
+                return;
+            }
 
-const Location = ({ latitude, longitude }) => {
-    const [map, setMap] = useState(null);
-    const SetViewOnClick = ({ lat, lng }) => {
-        const map = useMap();
-        useEffect(() => {
-            map.setView([lat, lng], map.getZoom());
-        }, [lat, lng, map]);
+            const { Map } = await window.google.maps.importLibrary("maps");
+            const { AdvancedMarkerElement } = await window.google.maps.importLibrary("marker");
+            const map = new Map(document.getElementById("map"), {
+                center: { lat: lat, lng: lng },
+                zoom: 19,
+                mapId: "4504f8b37365c3d0",
+            });
+            new AdvancedMarkerElement({
+                map,
+                position: { lat: lat, lng: lng },
+            });
+        }
 
-        return null;
-    };
+        loadGoogleMapsScript();
+    }, []);
 
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
-        <h1>Our Location</h1>
-        <MapContainer
-            center={[latitude, longitude]}
-            zoom={18}
-            zoomControl={true}
-            whenCreated={setMap}
-            style={{ width: '900px', height: '500px' }}
-        >
-            <TileLayer
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-            <Marker position={[latitude, longitude]} />
-            <SetViewOnClick lat={latitude} lng={longitude} />
-        </MapContainer>
-        </div>
+        <Flex flexDirection={'column'}>
+            <Styled.StyledH1>Our Location</Styled.StyledH1>
+            <div id="map" style={{ width: '75%', height: '600px' }}/>
+        </Flex>
     );
 };
 
 export default Location;
+
+

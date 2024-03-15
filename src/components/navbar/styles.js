@@ -26,5 +26,5 @@ export const StyledPageButton = styled.div`
   overflow-x: auto;
   font-family: ${font};
   font-size: ${fontSize};
-  color: ${(props) => (props.$active ? activeColor : inactiveColor)}; // Use 'gray' or a specific gray color code;
+  color: ${(props) => (props.$active ? activeColor : inactiveColor)};
 `;

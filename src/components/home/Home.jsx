@@ -3,12 +3,14 @@ import Favorite from "./favorite/Favorite";
 import TestImg from './favorite/images/test.png';
 import Flex from "../../layout/flex";
 import * as Styled from "./styles";
+import Story from "./story/story";
 function Home() {
     return (
-        <div>
+        <Flex flexDirection={'column'}>
+            <Story/>
             <Styled.StyledH1>Some of our Favorites...</Styled.StyledH1>
-            <Flex flexDirection={'column'} gap={'40px'}>
-                <Flex gap={'200px'}>
+            <Flex flexDirection={'column'} gap={'40px'} width={'90%'}>
+                <Flex justifyContent={'center'}>
                     <Favorite
                         imageSrc={TestImg}
                         title="SASHIMI PLATTER"
@@ -20,7 +22,7 @@ function Home() {
                         description="Fresh uni, masago, quail egg & scallion in spoons"
                     />
                 </Flex>
-                <Flex gap={'200px'}>
+                <Flex justifyContent={'center'}>
                     <Favorite
                         imageSrc={TestImg}
                         badgeText="Chef's Choice!"
@@ -34,9 +36,8 @@ function Home() {
                     />
                 </Flex>
             </Flex>
-
-            <Location latitude={32.87002934058916} longitude={-117.23094501164017}/>
-        </div>
+            <Location lat={32.86944812640623} lng={-117.23104440521658}/>
+        </Flex>
     )
 }
 

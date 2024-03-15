@@ -9,9 +9,7 @@ import * as Styled from "./styles";
 function Footer() {
     return (
         <Styled.StyledFooter>
-            <Flex display={'fixed'}>
-                <Styled.StyledHr/>
-            </Flex>
+            <Styled.StyledHr/>
             <Flex justifyContent="center" alignItems="center">
                 <Flex justifyContent="center" flexDirection='column' alignItems="center">
                     <Info title='Address' content={['8843 Villa La Jolla Dr,', 'La Jolla, CA 92037']}/>

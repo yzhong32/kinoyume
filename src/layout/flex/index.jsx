@@ -5,8 +5,11 @@ function Flex({
                   justifyContent,
                   alignItems,
                   marginRight,
-                  children,
                   display,
+                  width,
+                  top,
+                  gap,
+                  children,
                   ...props
               }) {
     return (
@@ -16,6 +19,9 @@ function Flex({
             $alignItems={alignItems}
             $marginRight={marginRight}
             $display={display}
+            $width={width}
+            $top={top}
+            $gap={gap}
             {...props}
         >
             {children}

@@ -11,8 +11,7 @@ export const FavoriteContainer = styled.div`
 export const FavoriteImage = styled.img`
   width: 100%; 
   height: 100%; 
-  border-radius: 50%; 
-  object-fit: cover;
+  border-radius: 50%;
 `;
 
 export const FavoriteBadge = styled.div`
