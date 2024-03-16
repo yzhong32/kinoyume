@@ -4,7 +4,12 @@ import PropTypes from 'prop-types';
 
 function Favorite({imageSrc, title, description, badgeText}) {
   return (
-    <Flex flexDirection={'column'} width={'40%'}>
+    <Flex
+      flexDirection={'column'}
+      gap={'10px'}
+      justifyContent={'flex-start'}
+      alignItems={'center'}
+    >
       <Styled.FavoriteContainer>
         <Styled.FavoriteImage src={imageSrc} alt={title}/>
         {badgeText && <Styled.FavoriteBadge>{badgeText}</Styled.FavoriteBadge>}

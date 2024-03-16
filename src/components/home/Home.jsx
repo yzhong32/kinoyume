@@ -1,6 +1,9 @@
 import Location from './location/Location';
 import Favorite from './favorite/Favorite';
-import TestImg from './favorite/images/test.png';
+import Food1 from './favorite/images/food1.png';
+import Food2 from './favorite/images/food2.png';
+import Food3 from './favorite/images/food3.png';
+import Food4 from './favorite/images/food4.png';
 import Flex from '../../layout/flex';
 import * as Styled from './styles';
 import Story from './story/story';
@@ -8,34 +11,34 @@ import Hero from './hero/hero';
 
 function Home() {
   return (
-    <Flex flexDirection={'column'}>
+    <Flex flexDirection={'column'} gap={'40px'}>
       <Hero/>
       <Story/>
       <Styled.StyledH1>Some of our Favorites...</Styled.StyledH1>
       <Flex flexDirection={'column'} gap={'40px'} width={'90%'}>
         <Flex justifyContent={'center'}>
           <Favorite
-            imageSrc={TestImg}
+            imageSrc={Food1}
             title="SASHIMI PLATTER"
             description={`High grade sashimi with salmon, 
               fish roe, yellow tail, scallop, and Uni`}
           />
           <Favorite
-            imageSrc={TestImg}
+            imageSrc={Food2}
             title="UNI SPOONS"
             description="Fresh uni, masago, quail egg & scallion in spoons"
           />
         </Flex>
         <Flex justifyContent={'center'}>
           <Favorite
-            imageSrc={TestImg}
+            imageSrc={Food3}
             badgeText="Chef's Choice!"
             title="SASHIMI PLATTER"
             description={`Uni, blue fin toro, toro, salmon,
               shrimp head, yellow tail, octopus`}
           />
           <Favorite
-            imageSrc={TestImg}
+            imageSrc={Food4}
             title="CHICKEN TERIYAKI DON"
             description={`Teriyaki chicken, vegetables, topped 
               with scallions and sesame seeds, served with rice`}

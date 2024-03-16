@@ -2,34 +2,36 @@ import styled from 'styled-components';
 
 export const FavoriteContainer = styled.div`
   position: relative;
-  width: 350px;
-  height: 350px;
+  width: 70%;
+  height: 70%;
   margin: auto;
-  border-radius: 50%;
+  border-color: black;
+  overflow: hidden;
 `;
 
 export const FavoriteImage = styled.img`
-  width: 100%; 
-  height: 100%; 
-  border-radius: 50%;
+  width: 100%;
+  height: 100%;
 `;
 
 export const FavoriteBadge = styled.div`
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(0%, 30%);
-  background-color: #b3312f;
+  transform: translate(-45%, 50%);
+  background-color: rgba(179, 22, 12, 1);
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  opacity: 0.85;
-  width: 60px;
-  height: 60px;
+  opacity: 0.80;
+  width: 65px;
+  height: 65px;
   text-align: center;
   font-size: 12px;
+  line-height: 14.52px;
+  font-family: 'Inter', sans-serif;
 `;
 
 
@@ -42,16 +44,22 @@ export const FavoriteDescription = styled.div`
   font-size: 20px;
 `;
 
-export const FavoriteTitle = styled.h3`
-  margin: 0;
-  font-size: 1.6em;
-  color: #333;
+export const FavoriteTitle = styled.div`
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 28px;
   text-align: center;
+  color: black;
+  white-space: nowrap;
 `;
 
 export const FavoriteText = styled.div`
-  width: 300px;
-  margin: 10px 0 0;
-  color: #666;
-  min-height: 180px;
+  font-family: 'montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  width: 320px;
+  color: rgba(0, 0, 0, 0.55);
+  min-height: 154px;
 `;
