@@ -4,9 +4,9 @@ const activeColor = 'black';
 const inactiveColor = '#989E8D';
 
 const font = '\'Your font family here\', sans-serif';
-const fontSize = '20px'; // Adjust as necessary
+const fontSize = '1.4114326040931546vw';
 export const StyledNavBar = styled.div`
-  padding-top: 50px;
+  padding-top: 3.5285815102328866vw;
   width: 100%;
   display: flex;
   align-items: center;
@@ -15,9 +15,9 @@ export const StyledNavBar = styled.div`
 
 export const StyledLogo = styled.img`
   width: 80%;
-  max-width: 300px;
+  max-width: 21.17148906139732vw;
   height: auto;
-  margin-right: 80px;
+  margin-right: 5.6457304163726185vw;
   margin-left: 6%;
 `;
 

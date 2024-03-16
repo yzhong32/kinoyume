@@ -22,10 +22,10 @@ const Location = ({lat, lng}) => {
   initMap();
 
   return (
-    <Flex flexDirection={'column'} gap={'47px'}>
+    <Flex flexDirection={'column'} gap={'3.316866619618913vw'}>
       <Styled.StyledH1>Our Location</Styled.StyledH1>
       <div id="map" style={{
-        width: '77.6%', height: '611px',
+        width: '77.6%', height: '43.11926605504587vw',
       }}/>
     </Flex>
   );

@@ -21,7 +21,7 @@ function NavBar() {
 
   return (
     <Styled.StyledNavBar>
-      <Flex justifyContent='space-around' marginBottom={'40px'}>
+      <Flex justifyContent='space-around' marginBottom={'2.8228652081863093vw'}>
         <Styled.StyledLogo src={Logo} alt="Logo"/>
         <Flex justifyContent='space-around' marginRight='6%'>
           <PageItem

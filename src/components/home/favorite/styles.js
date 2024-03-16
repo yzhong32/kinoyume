@@ -26,11 +26,11 @@ export const FavoriteBadge = styled.div`
   align-items: center;
   border-radius: 50%;
   opacity: 0.80;
-  width: 65px;
-  height: 65px;
+  width: 4.587155963302752vw;
+  height: 4.587155963302752vw;
   text-align: center;
-  font-size: 12px;
-  line-height: 14.52px;
+  font-size: 0.8468595624558928vw;
+  line-height: 1.0247000705716303vw;
   font-family: 'Inter', sans-serif;
 `;
 
@@ -39,16 +39,16 @@ export const FavoriteDescription = styled.div`
   position: relative;
   bottom: 0;
   background-color: white;
-  padding: 20px;
+  padding: 1.4114326040931546vw;
   width: 100%;
-  font-size: 20px;
+  font-size: 1.4114326040931546vw;
 `;
 
 export const FavoriteTitle = styled.div`
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 28px;
+  font-size: 1.9760056457304165vw;
   font-weight: 600;
-  line-height: 28px;
+  line-height: 1.9760056457304165vw;
   text-align: center;
   color: black;
   white-space: nowrap;
@@ -56,10 +56,10 @@ export const FavoriteTitle = styled.div`
 
 export const FavoriteText = styled.div`
   font-family: 'montserrat', sans-serif;
-  font-size: 20px;
+  font-size: 1.4114326040931546vw;
   font-weight: 400;
-  line-height: 28px;
-  width: 320px;
+  line-height: 1.9760056457304165vw;
+  width: 22.582921665490474vw;
   color: rgba(0, 0, 0, 0.55);
-  min-height: 154px;
+  min-height: 10.86803105151729vw;
 `;

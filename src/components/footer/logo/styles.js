@@ -10,28 +10,30 @@ export const LogoContainer = styled.div`
 `;
 
 export const Logo = styled.img`
-  margin-bottom: 25.32px;
+  width: 22.6vw;
+  margin-bottom: 1.7868736767819vw;
 `;
 
 export const SocialMediaIcons = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
-  width: 252.66px;
-  height: 63px;
-  top: 111px;
-  margin-bottom: 24.75px;
+  gap: 2.82286520818vw;
+  width: 17.83vw;
+  height: 4.4460127vw;
+  top: 7.8334509527170vw;
+  margin-bottom: 1.7466478475652787vw;
 `;
 
 export const Icon = styled.img`
+  width: 4.45vw;
 `;
 
 export const BottomBorder = styled.div`
-  width: 320.36px;
+  width: 22.6vw;
   height: 1px;
   background-color: #CFCFCF;
   background-image: linear-gradient(to right,
   #FFFFFF 0%, #CFCFCF 50%, #FFFFFF 100%);
-  margin-bottom: 22.08px;
+  margin-bottom: 1.5582215949188vw;
 `;

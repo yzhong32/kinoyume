@@ -17,9 +17,11 @@ function Footer() {
         >
           <Info
             title='Address'
-            content={['addr',
-              '8843 Villa La Jolla Dr,',
-              'La Jolla, CA 92037']}/>
+            content={
+              ['addr',
+                '8843 Villa La Jolla Dr,',
+                'La Jolla, CA 92037']
+            }/>
           <Info title='Contact Us' content={['phone', '(858) 999-0308']}/>
         </Flex>
 

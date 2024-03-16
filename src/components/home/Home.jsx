@@ -11,11 +11,11 @@ import Hero from './hero/hero';
 
 function Home() {
   return (
-    <Flex flexDirection={'column'} gap={'40px'}>
+    <Flex flexDirection={'column'} gap={'2.8228652081863093vw'}>
       <Hero/>
       <Story/>
       <Styled.StyledH1>Some of our Favorites...</Styled.StyledH1>
-      <Flex flexDirection={'column'} gap={'40px'} width={'90%'}>
+      <Flex flexDirection={'column'} gap={'2.8228652081863093vw'} width={'90%'}>
         <Flex justifyContent={'center'}>
           <Favorite
             imageSrc={Food1}

@@ -9,12 +9,12 @@ import Footer from './components/footer/Footer';
 
 const PageContainer = styled.div`
   display: flex;
-  margin-right: 3%;
-  margin-left: 3%;
+  margin-right: 2%;
+  margin-left: 2%;
   flex-direction: column;
   min-height: 100vh;
   background-color: white;
-  gap: 75px;
+  gap: 5.292872265349329vw;
 `;
 
 function App() {

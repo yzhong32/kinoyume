@@ -22,7 +22,7 @@ const ModalBackground = styled.div`
 
 const ModalContainer = styled.div`
   background-color: white;
-  padding: 20px;
+  padding: 1.4114326040931546vw;
   width: 30vw;
   height: 30vw;
 `;
@@ -31,7 +31,7 @@ const CloseButton = styled.button`
   float: right;
   border: none;
   background: none;
-  font-size: 4.5rem;
+  font-size: 5.081157374735357vw;
   cursor: pointer;
 `;
 // Replace these with your actual image URLs
@@ -42,7 +42,7 @@ const foodImages = [
 const FoodImageContainer = styled.div`
   display: flex;
   width: 100%; 
-  height: 640px; 
+  height: 45.16584333098095vw;
   overflow: hidden;
   position: relative;
 `;
@@ -63,19 +63,19 @@ const NameImage = styled.img`
   width: 50vw;
   position: absolute;
   z-index: 10;
-  top: -220px;
-  left: 30px;
+  top: -15.5257586450247vw;
+  left: 2.117148906139732vw;
 `;
 
 const RSVButton = styled.button`
   background-color: white;
   color: black;
-  font-size: 16px;
+  font-size: 1.1291460832745237vw;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 10px 40px;
+  padding: 0.7057163020465773vw 2.8228652081863093vw;
   border-color: black;
-  border-radius: 10px;
+  border-radius: 0.7057163020465773vw;
   border-width: 1px;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -92,12 +92,12 @@ const RSVButton = styled.button`
 const MenuButton = styled.button`
   background-color: #a1000d; /* A deep orange/red color */
   color: #FFFFFF; /* White text */
-  font-size: 16px; /* Adjust as needed */
+  font-size: 1.1291460832745237vw;
   font-weight: bold; /* Makes the text bold */
   text-transform: uppercase; /* Uppercases the text */
-  padding: 10px 40px; /* Vertical and horizontal padding */
+  padding: 0.7057163020465773vw 2.8228652081863093vw;
   border: none; /* No border */
-  border-radius: 10px; /* Rounded corners */
+  border-radius: 0.7057163020465773vw;
   cursor: pointer; /* Changes the cursor to a pointer on hover */
   transition: background-color 0.3s; /* Smooth transition for hover effect */
 
@@ -127,8 +127,8 @@ const TimeButton = styled.button`
 
   /* Additional styling for text color, padding, font, etc. */
   color: #333;            /* Sets the text color; change as needed */
-  padding: 10px 20px;     /* Adds some padding around the text */
-  font-size: 22px;        /* Sets the font size; adjust as needed */
+  padding: 0.7057163020465773vw 1.4114326040931546vw;
+  font-size: 1.55257586450247vw;
   cursor: pointer;
 
   span {
@@ -176,14 +176,14 @@ const Hero = () => {
   }, []);
 
   return (
-    <Flex marginBottom={'40px'}>
-      <Flex flexDirection={'column'} gap={'120px'}>
+    <Flex marginBottom={'2.8228652081863093vw'}>
+      <Flex flexDirection={'column'} gap={'8.468595624558928vw'}>
         <NameImage src={Name} alt={''}/>
         <Flex
           flexDirection={'column'}
           justifyContent={'start'}
-          gap={'120px'}
-          top={'100px'}
+          gap={'8.468595624558928'}
+          top={'7.057163020465773vw'}
         >
           <TimeButton
             onClick={() => setModalOpen(true)}
@@ -235,5 +235,4 @@ const Hero = () => {
     </Flex>
   );
 };
-
 export default Hero;
