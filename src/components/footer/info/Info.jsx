@@ -1,6 +1,7 @@
 import * as Styled from './styles';
 import Flex from '../../../layout/flex';
 import extractDayAndTime from '../../../utils/helper';
+import PropTypes from 'prop-types';
 
 function Info({title, content}) {
   const contentType = content[0];
@@ -21,21 +22,23 @@ function Info({title, content}) {
         ));
       case 'open':
         const {days, times} = extractDayAndTime(content);
-        const dayComponent = <Styled.Paragraph>
-          <Flex flexDirection={'column'} alignItems={'end'}>
-            {days.map((line, index) => (
-              <Styled.Paragraph key={index}>{line}</Styled.Paragraph>
-            ))}
-          </Flex>
-        </Styled.Paragraph>;
+        const dayComponent = <Flex
+          flexDirection={'column'}
+          alignItems={'end'}
+        >
+          {days.map((line, index) => (
+            <Styled.Paragraph key={index}>{line}</Styled.Paragraph>
+          ))}
+        </Flex>;
 
-        const timeComponent = <Styled.Paragraph>
-          <Flex flexDirection={'column'} alignItems={'start'}>
-            {times.map((line, index) => (
-              <Styled.Paragraph key={index}>{line}</Styled.Paragraph>
-            ))}
-          </Flex>
-        </Styled.Paragraph>;
+        const timeComponent = <Flex
+          flexDirection={'column'}
+          alignItems={'start'}
+        >
+          {times.map((line, index) => (
+            <Styled.Paragraph key={index}>{line}</Styled.Paragraph>
+          ))}
+        </Flex>;
 
 
         return (
@@ -56,6 +59,11 @@ function Info({title, content}) {
     </Flex>
   );
 }
+
+Info.propTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
 
 export default Info;
 

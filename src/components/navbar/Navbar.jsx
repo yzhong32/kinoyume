@@ -2,6 +2,7 @@ import Flex from '../../layout/flex';
 import * as Styled from './styles';
 import Logo from './logo.png';
 import {usePage} from '../../context/PageProvider';
+import PropTypes from 'prop-types';
 
 function PageItem({active, done, children, onClick}) {
   return (
@@ -64,5 +65,12 @@ function NavBar() {
     </Styled.StyledNavBar>
   );
 }
+
+PageItem.propTypes = {
+  active: PropTypes.bool,
+  done: PropTypes.bool,
+  children: PropTypes.node,
+  onClick: PropTypes.func,
+};
 
 export default NavBar;

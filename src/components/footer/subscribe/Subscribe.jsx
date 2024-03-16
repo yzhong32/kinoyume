@@ -1,6 +1,6 @@
 import Flex from '../../../layout/flex';
 import styled from 'styled-components';
-import React, {useState} from 'react';
+import {useState} from 'react';
 import Button from '../button/Button';
 
 const SubscribeStyle = styled.div`
@@ -29,9 +29,9 @@ const SubscribeStyle = styled.div`
 `;
 
 function Subscribe() {
-  const [email, setEmail] = useState(''); // Initialize the state to an empty string
+  const [email, setEmail] = useState('');
   const handleChange = (event) => {
-    setEmail(event.target.value); // Update the state value when input changes
+    setEmail(event.target.value);
   };
 
   return (

@@ -1,4 +1,5 @@
 import {createContext, useState, useContext} from 'react';
+import PropTypes from 'prop-types'; // Correct import for PropTypes
 
 export const PageContext = createContext(null);
 
@@ -13,3 +14,10 @@ export const PageProvider = ({children}) => {
     </PageContext.Provider>
   );
 };
+
+// Correct usage of PropTypes for validation
+PageProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+

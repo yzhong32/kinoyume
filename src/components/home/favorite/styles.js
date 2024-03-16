@@ -49,7 +49,7 @@ export const FavoriteTitle = styled.h3`
   text-align: center;
 `;
 
-export const FavoriteText = styled.p`
+export const FavoriteText = styled.div`
   width: 300px;
   margin: 10px 0 0;
   color: #666;

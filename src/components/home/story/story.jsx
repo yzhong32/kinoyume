@@ -16,9 +16,11 @@ function Story() {
       <Styled.Restaurants src={Img} alt={''}/>
       <Flex flexDirection={'column'} width={'16%'}>
         <Styled.StyledP>
+          {/* eslint-disable-next-line max-len */}
           Kinoyume specializes in a variety of Japanese food: Sushi, Curry, Ramen, and unique fusion dishes
         </Styled.StyledP>
         <Styled.StyledP>
+          {/* eslint-disable-next-line max-len,react/no-unescaped-entities */}
           Our restaurant, Kinoyume, translates to "dream of trees" and was named after the previous owners wife's love
           for trees.
         </Styled.StyledP>

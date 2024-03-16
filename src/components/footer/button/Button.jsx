@@ -1,5 +1,6 @@
 import * as Styled from './styles';
 import {useState} from 'react';
+import PropTypes from 'prop-types';
 
 function Button({invert, children, onClick, ...props}) {
   const [buttonColor, setButtonColor] = useState('#f29a98');
@@ -22,6 +23,12 @@ function Button({invert, children, onClick, ...props}) {
     </Styled.Button>
   );
 }
+
+Button.propTypes = {
+  invert: PropTypes.bool,
+  children: PropTypes.node,
+  onClick: PropTypes.func,
+};
 
 
 export default Button;

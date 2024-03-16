@@ -1,6 +1,6 @@
-import React from 'react';
 import * as Styled from './styles';
 import Flex from '../../../layout/flex';
+import PropTypes from 'prop-types';
 
 function Favorite({imageSrc, title, description, badgeText}) {
   return (
@@ -18,5 +18,12 @@ function Favorite({imageSrc, title, description, badgeText}) {
 
   );
 }
+
+Favorite.propTypes = {
+  imageSrc: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  badgeText: PropTypes.string,
+};
 
 export default Favorite;
