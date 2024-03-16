@@ -1,12 +1,9 @@
 import styled from 'styled-components';
 
 const activeColor = 'black';
-const inactiveColor = '#989E8D';
-
-const font = '\'Your font family here\', sans-serif';
-const fontSize = '1.4114326040931546vw';
+const inactiveColor = 'rgba(0, 0, 0, 0.55)';
 export const StyledNavBar = styled.div`
-  padding-top: 3.5285815102328866vw;
+  padding-top: 3.2110091743119265vw;
   width: 100%;
   display: flex;
   align-items: center;
@@ -14,17 +11,16 @@ export const StyledNavBar = styled.div`
 `;
 
 export const StyledLogo = styled.img`
-  width: 80%;
-  max-width: 21.17148906139732vw;
-  height: auto;
-  margin-right: 5.6457304163726185vw;
-  margin-left: 6%;
+  width: 22.018348623853212vw;
+  height: 5.857445306986592vw;
 `;
 
 export const StyledPageButton = styled.div`
   display: flex;
   overflow-x: auto;
-  font-family: ${font};
-  font-size: ${fontSize};
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.4114326040931546vw;
+  font-weight: 600;
+  line-height: 1.4114326040931546vw;;
   color: ${(props) => (props.$active ? activeColor : inactiveColor)};
 `;

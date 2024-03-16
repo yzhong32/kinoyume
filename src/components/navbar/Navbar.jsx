@@ -21,9 +21,16 @@ function NavBar() {
 
   return (
     <Styled.StyledNavBar>
-      <Flex justifyContent='space-around' marginBottom={'2.8228652081863093vw'}>
+      <Flex
+        gap={'5.6457304163726185vw'}
+        justifyContent={'center'}
+      >
         <Styled.StyledLogo src={Logo} alt="Logo"/>
-        <Flex justifyContent='space-around' marginRight='6%'>
+        <Flex
+          width={'auto'}
+          justifyContent='center'
+          gap={'3.10515172900494vw'}
+        >
           <PageItem
             active={currentPage === 1}
             done={currentPage !== 1}

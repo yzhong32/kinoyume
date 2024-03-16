@@ -1,8 +1,9 @@
 import {useState, useEffect} from 'react';
 import styled from 'styled-components';
-import Food1 from './food1.png';
-import Food2 from './food2.png';
-import Name from './name.png';
+import Food1 from './istockphoto1.png';
+import Food2 from './ramen.png';
+import Food3 from './istockphoto2.png';
+import Name from './Japanese Text.png';
 import {usePage} from '../../../context/PageProvider';
 import Flex from '../../../layout/flex';
 
@@ -36,34 +37,28 @@ const CloseButton = styled.button`
 `;
 // Replace these with your actual image URLs
 const foodImages = [
-  Food1, Food2,
+  Food1, Food2, Food3,
 ];
 
 const FoodImageContainer = styled.div`
   display: flex;
-  width: 100%; 
-  height: 45.16584333098095vw;
-  overflow: hidden;
+  width: 48.63443895553987vw;
+  height: 48.63443895553987vw;
   position: relative;
 `;
 
 const FoodImage = styled.img`
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 48.63443895553987vw;
+  height: 48.63443895553987vw;
   transition: opacity 0.5s ease-in-out;
   z-index: 5;
 `;
 
 const NameImage = styled.img`
-  width: 50vw;
+  width: 54vw;
   position: absolute;
   z-index: 10;
-  top: -15.5257586450247vw;
+  top: -22vw;
   left: 2.117148906139732vw;
 `;
 
