@@ -34,9 +34,9 @@ jobs:
       - name: Deploy to EC2
         run: |
           echo "Transferring build directory to EC2 instance..."
-          scp -r ./build ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/tmp/
-          ssh ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} 'sudo cp -r /tmp/build /var/www/html/'
-          ssh ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} 'sudo rm -rf /tmp/build/'
+          scp -o StrictHostKeyChecking=no -r ./build ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/tmp/
+          ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} 'sudo cp -r /tmp/build /var/www/html/'
+          ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} 'sudo rm -rf /tmp/build/'
 
           echo "Deployment completed successfully."
         env:
