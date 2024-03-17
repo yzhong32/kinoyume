@@ -9,26 +9,35 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - name: Setup SSH
-      uses: webfactory/ssh-agent@v0.9.0
-      with:
-        ssh-private-key: ${{ secrets.EC2_SSH_KEY }}
+      # Setup Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
 
-    - name: Deploy to EC2
-      run: |
-        echo "Building React app..."
-        npm run build
+      # Install dependencies
+      - name: Install dependencies
+        run: npm install
 
-        echo "Transferring build directory to EC2 instance..."
-        scp -r ./build ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/tmp/
-        ssh ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} 'sudo cp -r /tmp/build /var/www/html/'
-        ssh ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} 'sudo rm -rf /tmp/build/'
+      # Build the React app
+      - name: Build React app
+        run: npm run build
 
-        echo "Removing local build directory..."
-        rm -rf build
+      # Setup SSH for deployment
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.EC2_SSH_KEY }}
 
-        echo "Deployment completed successfully."
-      env:
-        EC2_USER: ec2-user
+      - name: Deploy to EC2
+        run: |
+          echo "Transferring build directory to EC2 instance..."
+          scp -r ./build ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/tmp/
+          ssh ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} 'sudo cp -r /tmp/build /var/www/html/'
+          ssh ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} 'sudo rm -rf /tmp/build/'
+
+          echo "Deployment completed successfully."
+        env:
+          EC2_USER: ec2-user
